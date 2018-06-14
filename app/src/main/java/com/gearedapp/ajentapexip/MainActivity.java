@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         if (pexView != null) {
             pexView.evaluateFunction("disconnect");
-
         }
     }
 
@@ -178,9 +177,7 @@ public class MainActivity extends AppCompatActivity {
                 pexView.evaluateFunction("makeCall", "pex-pool.vscene.net", roomextension, username);
                 //john_vmr
             }
-
         });
-
 
         pexView.load();
     }
@@ -195,14 +192,14 @@ public class MainActivity extends AppCompatActivity {
     });
 
     private View.OnClickListener onMute = ((View v) -> {
-        Log.d(TAG_BTN, "Connect");
+        Log.d(TAG_BTN, "Stop Video");
         if (pexView != null) {
             pexView.evaluateFunction("muteVideo", true);
         }
 
     });
     private View.OnClickListener onUnmute = ((View v) -> {
-        Log.d(TAG_BTN, "Connect");
+        Log.d(TAG_BTN, "Start Video");
         if (pexView != null) {
             pexView.evaluateFunction("muteVideo", false);
         }
@@ -210,13 +207,13 @@ public class MainActivity extends AppCompatActivity {
     });
 
     private View.OnClickListener onmuteMic = ((View v) -> {
-        Log.d(TAG_BTN, "MUTEMIC");
+        Log.d(TAG_BTN, "Mute Mic");
         if (pexView != null) {
             pexView.evaluateFunction("muteAudio", true);
         }
     });
     private View.OnClickListener onunmuteMic = ((View v) -> {
-        Log.d(TAG_BTN, "unmutemic");
+        Log.d(TAG_BTN, "Start Mic");
         if (pexView != null) {
             pexView.evaluateFunction("muteAudio", false);
         }
