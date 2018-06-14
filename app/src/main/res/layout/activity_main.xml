@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/pex_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/relative_layout_background"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="614dp">
+
+        <!-- Self view Buttons-->
+        <com.pexip.android.wrapper.PexView
+            android:id="@+id/pex_self_layout"
+            android:layout_width="400px"
+            android:layout_height="450px"
+            android:padding="10dp" />
+        <Button
+            android:id="@+id/btn_disconnect"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10px"
+            android:text="disconnect"
+            android:textSize="10dp"
+            android:background="@drawable/rounded"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <Button
+            android:id="@+id/btn_mute"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5px"
+            android:text="mute"
+            android:textSize="10dp"
+            android:background="@drawable/rounded"
+            android:layout_toEndOf="@+id/btn_disconnect"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <Button
+            android:id="@+id/btn_unmute"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10px"
+            android:textSize="10dp"
+            android:text="unmute"
+            android:layout_toEndOf="@+id/btn_mute"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/roundedgreen"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_mutemic"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10px"
+            android:textSize="10dp"
+            android:text="mute mic"
+            android:layout_toEndOf="@+id/btn_unmute"
+            android:background="@drawable/rounded"
+          />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_turnonmic"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10px"
+            android:textSize="10dp"
+            android:text="mute mic"
+            android:layout_toEndOf="@+id/btn_mutemic"
+            android:background="@drawable/roundedgreen"
+            />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
