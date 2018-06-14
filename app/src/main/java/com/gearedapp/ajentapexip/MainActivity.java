@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     private String roomextension;
     private Button mutemicBtn;
     private Button disconnectBtn;
-    private Button connectBtn;
     private Button muteBtn;
     private Button unmuteBtn;
     private Button unmutemicBtn;
@@ -128,13 +127,13 @@ public class MainActivity extends AppCompatActivity {
         muteBtn = findViewById(R.id.btn_mute);
         unmuteBtn = findViewById(R.id.btn_unmute);
         mutemicBtn = findViewById(R.id.btn_mutemic);
-        unmuteBtn = findViewById(R.id.btn_turnonmic);
+        unmutemicBtn = findViewById(R.id.btn_turnonmic);
 
         disconnectBtn.setOnClickListener(onDisconnect);
         muteBtn.setOnClickListener(onMute);
         unmuteBtn.setOnClickListener(onUnmute);
         mutemicBtn.setOnClickListener(onmuteMic);
-        unmuteBtn.setOnClickListener(onunmuteMic);
+        unmutemicBtn.setOnClickListener(onunmuteMic);
 
         layout = findViewById(R.id.pex_layout);
         layout.addView(pexView, pexLayoutParams);
